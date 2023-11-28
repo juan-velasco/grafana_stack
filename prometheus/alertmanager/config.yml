@@ -1,0 +1,10 @@
+# https://prometheus.io/docs/alerting/latest/configuration/#route-related-settings
+route:
+  receiver: 'webhook1'
+
+# Receptores de las alertas, que pueden ser mediante email, teams, slack, webhook...
+# https://prometheus.io/docs/alerting/latest/configuration/#general-receiver-related-settings
+receivers:
+  - name: 'webhook1'
+    webhook_configs:
+      - url: http://my.alerts.example.com
